@@ -9,6 +9,12 @@
     margin: 0 auto;
 }
 
+.containers {
+    background-color: #414349;
+    width: 1200px;
+    margin: 0 auto;
+}
+
 body {
     font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #c2d0d0;
@@ -45,7 +51,7 @@ li {
 }
 
 h1 {
-    font-family: 'Cinzel', 'Georgia', 'Times New Roman', serif;
+    font-family: 'Georgia', 'Times New Roman', serif;
     font-size: 70px;
     color: white;
     text-align: center;

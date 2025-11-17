@@ -16,7 +16,6 @@ button.addEventListener('click', ()=>{
     }
 });
 
-//Проверка ИНН
 const innInput = document.getElementById('inn_input');
 const innButton = document.getElementById('inn_button');
 const innResult = document.getElementById('inn_result');
@@ -35,7 +34,6 @@ innButton.addEventListener('click', ()=>{
     }
 });
 
-//движение квадрата по квадрату
 const parentBlock = document.querySelector('.parent_block');
 const childBlock = document.querySelector('.child_block');
 
@@ -73,7 +71,6 @@ function move(){
 setTimeout(move, 10)
 }
 move()
-//Секундомер
 let milliseconds = 0;
 let intervalId;
 let running = false;
@@ -81,18 +78,15 @@ let running = false;
 function updateTimer() {
     milliseconds ++;
 
-    //Рассчитываем минуты, секунды и миллисекунды
     const minutes = Math.floor(milliseconds / 6000);
     const seconds = Math.floor((milliseconds % 6000) / 100);
     const tenths = milliseconds % 100;
 
-    //Обновляем все элементы
     document.getElementById('minutesS').innerText = minutes.toString().padStart(2, '0');
     document.getElementById('secondsS').innerText = seconds.toString().padStart(2, '0');
     document.getElementById('ml-secondsS').innerText = tenths.toString().padStart(2, '0');
 }
 
-//Функция сброса таймера
 function resetTimer() {
     milliseconds = 0;
     document.getElementById('minutesS').innerText = '00';
@@ -105,7 +99,6 @@ function resetTimer() {
     }
 }
 
-//Обаботчик событий
 document.getElementById('start').addEventListener('click', function(){
     if(!running){
         intervalId = setInterval(updateTimer, 10);

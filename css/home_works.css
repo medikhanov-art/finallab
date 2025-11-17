@@ -1,6 +1,3 @@
-
-/* GMAIL BLOCK */
-
 .gmail_block {
     background: black;
     padding: 100px 0;
@@ -26,8 +23,6 @@
     width: 100%;
     margin: 20px 0;
 }
-
-/* MOVE BLOCK */
 
 .move_block {
     background: black;
@@ -62,8 +57,6 @@
 .inner_move_block {
     margin-top: 50px;
 }
-
-/*----ANALOG CLOCK-----*/
 
 .clock {
     --clock-size: 360px;
@@ -161,9 +154,6 @@
     width: calc(var(--clock-size)/ 2.75);
     transform: translatey(-50%);
 }
-
-
-/*-------STOP WATCH------ */
 
 .time {
     color: white;

@@ -1,4 +1,3 @@
-// Проверка номера
 const phoneBlocks = document.querySelectorAll('.phone_block');
 
 phoneBlocks.forEach(block => {
@@ -34,7 +33,6 @@ phoneBlocks.forEach(block => {
     });
 });
 
-//Tab Slider
 const tabsContentCards = document.querySelectorAll('.tab_content_block');
 const tabsItems = document.querySelectorAll('.tab_content_item');
 const tabsItemsParents =  document.querySelector('.tab_content_items');
@@ -69,10 +67,8 @@ tabsItemsParents.onclick = (event) => {
     }
 }
 
-let curretIndex = 0; // Первая вкладка
-let intervalId; //Переменная для хранения интервала
-
-//Ф-ция для автоматического переключения
+let curretIndex = 0;
+let intervalId;
 
 const startAuthoSlider = ()=>{
     intervalId = setInterval(()=>{
@@ -81,10 +77,7 @@ const startAuthoSlider = ()=>{
         curretIndex = (curretIndex +1) % tabsItems.length;
     }, 2000); // 2сек
 }
-//Запуск автослайдера
 startAuthoSlider();
-
-//Остановка слайдера при клике на вкладку
 
 tabsItemsParents.onclick = (event) => {
     clearInterval(intervalId);
@@ -100,7 +93,6 @@ tabsItemsParents.onclick = (event) => {
     }
 }
 
-// Получаем input элементы
 const somInput = document.getElementById('som');
 const usdInput = document.getElementById('usd');
 const eurInput = document.getElementById('eur');
@@ -274,13 +266,11 @@ const memeQuotes = [
     }
 ];
 
-// Функция для получения данных карточки
 function getCardData(cardNumber) {
     const index = (cardNumber - 1) % memeQuotes.length;
     return memeQuotes[index];
 }
 
-// Функция для обновления отображения карточки
 function updateCard(cardData) {
     if (!cardData) {
         card1.innerHTML = `
@@ -298,13 +288,11 @@ function updateCard(cardData) {
     `;
 }
 
-// Функция для загрузки и отображения карточки
 function loadCard(cardNumber) {
     const cardData = getCardData(cardNumber);
     updateCard(cardData);
 }
 
-// Обработчики для кнопок
 btnPrev1.addEventListener('click', () => {
     if (count > 1) {
         count--;
@@ -319,11 +307,9 @@ btnNext1.addEventListener('click', () => {
     }
 });
 
-// Загружаем первую карточку при загрузке страницы
 loadCard(count);
 
 
-// Weather
 const cityInput = document.querySelector('.cityName');
 const citySpan = document.querySelector('.city');
 const tempSpan = document.querySelector('.temp');
